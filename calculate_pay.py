@@ -13,6 +13,9 @@ def calculate_pay(hours, wage):
     >>> calculate_pay(50, 10)
     600
     """
+    if hours <= 0 or wage <= 0:
+        return 0
+
     overtime_hours = 0
     if hours > 40:
         overtime_hours = hours - 40
@@ -22,3 +25,11 @@ def calculate_pay(hours, wage):
 
     total_pay = base_pay + over_time_pay
     return total_pay
+
+def main():
+    """
+    Drive the program.
+    """
+
+if __name__ == "__main__":
+    main()
