@@ -23,13 +23,15 @@ def calculate_pay(hours, wage):
     base_pay = (hours - overtime_hours) * wage
     over_time_pay = overtime_hours * 2 * wage
 
-    total_pay = base_pay + over_time_pay
+    total_pay = float(base_pay + over_time_pay)
     return total_pay
+
 
 def main():
     """
     Drive the program.
     """
+
 
 if __name__ == "__main__":
     main()
