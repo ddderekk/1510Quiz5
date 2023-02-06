@@ -6,6 +6,9 @@ class TestCalculatePay(TestCase):
     def test_calculate_pay_40_hours_and_float(self):
         self.assertEqual(620.0, calculate_pay(40, 15.5))
 
+    def test_calculate_pay_over_40_hours_and_float(self):
+        self.assertEqual(651.0, calculate_pay(41, 15.5))
+
     def test_calculate_hours_zero(self):
         self.assertEqual(0.0, calculate_pay(0, 10))
 
